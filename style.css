@@ -11,6 +11,10 @@ body {
     background-size: cover;
 }
 
+.about {
+    min-height: 90vh;
+}
+
 
 #about1 {
     font-size: 20px;
