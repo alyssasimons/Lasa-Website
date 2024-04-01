@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -15,7 +19,6 @@ body {
     min-height: 75vh;
 }
 
-
 #about1 {
     font-size: 20px;
 }
@@ -28,11 +31,6 @@ a, li {
     text-decoration: none;
     list-style: none;
 }
-
-li .linkedin {
-    text-align: center;
-}
-
 
 #btnrecipe:hover {
     transform: scale(1.10);
