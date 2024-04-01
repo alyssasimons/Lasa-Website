@@ -62,3 +62,9 @@ function displayRandomRecipe() {
 
 	recipeContainer.innerHTML = `<p>Recipe of the Day: ${randomRecipe}</p>`;
 }
+
+/* TODO
+- clean up this js code
+- remove or modify random recipe code
+- js code for current year in footer
+*/
