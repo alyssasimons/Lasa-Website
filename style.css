@@ -16,14 +16,10 @@ body {
 }
 
 .about {
-    min-height: 75vh;
+    min-height: 80vh;
 }
 
-#about1 {
-    font-size: 20px;
-}
-
-#about2 {
+#about1, #about2 {
     font-size: 20px;
 }
 
@@ -32,92 +28,32 @@ a, li {
     list-style: none;
 }
 
-#btnrecipe:hover {
-    transform: scale(1.10);
-}
-
-#btnindex:hover {
+#btnrecipe:hover, #btnindex:hover {
     transform: scale(1.10);
 }
 
 .navbar-brand {
     letter-spacing: 2px;
+}
 
+.navbar-nav li {
+    text-align: center;
 }
 
 ul {
     padding-left: 0;
 }
-/*
-.meal-details {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-    color: black;
-    border-radius: 1rem;
-    -webkit-border-radius: 1rem;
-    -moz-border-radius: 1rem;
-    -ms-border-radius: 1rem;
-    -o-border-radius: 1rem;
-    width: 70%;
-    height: 80%;
-    overflow-y: scroll;
-    display: none;
-    padding: 2rem 0;
+
+.suggestion {
+    text-align: center;
 }
 
-.meal-details::-webkit-scrollbar{
-    width: 10px;
-}
-.meal-details::-webkit-scrollbar-thumbs{
-    background: orange;
-    border-radius: 2rem;
-    -webkit-border-radius: 2rem;
-    -moz-border-radius: 2rem;
-    -ms-border-radius: 2rem;
-    -o-border-radius: 2rem;
-    width: 90%;
-
-}
-.showRecipe{
-    display: block;
+#formButton {
+    border-radius: 5px;
 }
 
-.meal-details-content{
-    margin: 2rem;
+#feedback {
+    width: 80%; 
+    min-height: 100px; 
+    resize: none;
 }
-
-.recipe-close-btn{
-    position: absolute;
-    right: 2rem;
-    top: 2rem;
-    font-size: 1.8rem;
-    background: #fff;
-    border: none;
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0.9;
-}
-
-.recipe-title{
-    letter-spacing: 1px;
-    padding-bottom: 1rem;
-}
-
-.recipe-instructions{
-    padding: 1rem 0;
-}
-*/
