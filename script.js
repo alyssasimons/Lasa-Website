@@ -1,3 +1,6 @@
+const currentYear = new Date().getFullYear();
+document.getElementById("year").innerHTML = currentYear;
+
 document.addEventListener('DOMContentLoaded', function() {
     const formButton = document.querySelector("#formButton");
     formButton.addEventListener("click", getInput);
@@ -17,11 +20,11 @@ function getInput() {
 		if (req.readyState == XMLHttpRequest.DONE && !sent) {
 			f.innerHTML='<p>Thanks for suggesting!</p>';
 			sent = true;
-      var arr = JSON.parse(req.responseText)['record'];
+      	var arr = JSON.parse(req.responseText)['record'];
 
 
 			req.open("PUT", "https://api.jsonbin.io/v3/b/655cc84d0574da7622c9c5eb", true);
-		req.setRequestHeader("Content-Type", "application/json");
+			req.setRequestHeader("Content-Type", "application/json");
 			req.setRequestHeader("X-ACCESS-Key", "$2a$10$Xn0VvCBkIdlWdh8D/uls3Os88h6ZQZCRvO6vAMPvhSZdGD43NUvXW");
 			arr.push({feedback: x});
 			req.send(JSON.stringify(arr));
@@ -43,5 +46,4 @@ myModal.addEventListener('shown.bs.modal', () => {
 
 /* TODO
 - clean up this js code
-- js code for current year in footer
 */
