@@ -41,30 +41,7 @@ myModal.addEventListener('shown.bs.modal', () => {
   myInput.focus()
 })
 
-// random recipe
-const recipes = [
-	'Sinigang',
-	'Filipino Spaghetti',
-	'Biko',
-	'Pancit Molo',
-	'Kare Kare', 
-	'Filipino Chop Suey'
-];
-
-document.getElementById('funButton').addEventListener('click', function() {
-	displayRandomRecipe();
-});
-
-function displayRandomRecipe() {
-	const recipeContainer = document.getElementById('recipeContainer');
-	const randomIndex = Math.floor(Math.random() * recipes.length);
-	const randomRecipe = recipes[randomIndex];
-
-	recipeContainer.innerHTML = `<p>Recipe of the Day: ${randomRecipe}</p>`;
-}
-
 /* TODO
 - clean up this js code
-- remove or modify random recipe code
 - js code for current year in footer
 */
