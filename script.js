@@ -1,19 +1,16 @@
-const currentYear = new Date().getFullYear();
-document.getElementById("year").innerHTML = currentYear;
-
 document.addEventListener('DOMContentLoaded', function() {
     const formButton = document.querySelector("#formButton");
-    formButton.addEventListener("click", getInput);
+    formButton.addEventListener("click", getSuggestion);
 });
 
-function getInput() {
+function getSuggestion() {
 	var sent = false;
 	var x = document.getElementById("feedback").value;
 	var f = document.getElementById("feedbackForm");
 	var t = document.getElementById("textArea");
 	if(x!=null && x!="")
 	{
-		formButton.removeEventListener("click", getInput);
+		formButton.removeEventListener("click", getSuggestion);
 		let req = new XMLHttpRequest();
 		t.innerHTML='<p>'+x+'</p>'
 		req.onreadystatechange = () => {
