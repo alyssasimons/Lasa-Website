@@ -22,7 +22,6 @@ function getInput() {
 
 			req.open("PUT", "https://api.jsonbin.io/v3/b/655cc84d0574da7622c9c5eb", true);
 			req.setRequestHeader("Content-Type", "application/json");
-			req.setRequestHeader("Content-Type", "application/json");
 			req.setRequestHeader("X-ACCESS-Key", "$2a$10$Xn0VvCBkIdlWdh8D/uls3Os88h6ZQZCRvO6vAMPvhSZdGD43NUvXW");
 			arr.push({feedback: suggestion});
 			req.send(JSON.stringify(arr));
