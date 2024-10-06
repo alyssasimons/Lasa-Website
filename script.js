@@ -4,26 +4,26 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function getInput() {
-	var sent = false;
-	var x = document.getElementById("feedback").value;
-	var f = document.getElementById("feedbackForm");
-	var t = document.getElementById("textArea");
-	if(x!=null && x!="")
-	{
+	let sent = false;
+	let suggestion = document.getElementById("feedback").value;
+	let form = document.getElementById("feedbackForm");
+	let text = document.getElementById("textArea");
+
+	if(suggestion != null && suggestion != "") {
 		formButton.removeEventListener("click", getInput);
 		let req = new XMLHttpRequest();
-		t.innerHTML='<p>'+x+'</p>'
+		text.innerHTML = `<p>${suggestion}</p>`
+
 		req.onreadystatechange = () => {
 		if (req.readyState == XMLHttpRequest.DONE && !sent) {
-			f.innerHTML='<p>Thanks for suggesting!</p>';
+			form.innerHTML='<p>Thanks for suggesting!</p>';
 			sent = true;
-      var arr = JSON.parse(req.responseText)['record'];
-
+      		let arr = JSON.parse(req.responseText)['record'];
 
 			req.open("PUT", "https://api.jsonbin.io/v3/b/655cc84d0574da7622c9c5eb", true);
-		req.setRequestHeader("Content-Type", "application/json");
+			req.setRequestHeader("Content-Type", "application/json");
 			req.setRequestHeader("X-ACCESS-Key", "$2a$10$Xn0VvCBkIdlWdh8D/uls3Os88h6ZQZCRvO6vAMPvhSZdGD43NUvXW");
-			arr.push({feedback: x});
+			arr.push({feedback: suggestion});
 			req.send(JSON.stringify(arr));
 		}
 		};
@@ -33,6 +33,7 @@ function getInput() {
 		req.send();
 	}
 }
+/*
 
 const myModal = document.getElementById('myModal')
 const myInput = document.getElementById('myInput')
@@ -61,4 +62,4 @@ function displayRandomRecipe() {
 	const randomRecipe = recipes[randomIndex];
 
 	recipeContainer.innerHTML = `<p>Recipe of the Day: ${randomRecipe}</p>`;
-}
+} */
